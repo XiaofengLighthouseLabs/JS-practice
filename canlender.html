@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calander</title>
+    <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+    <style type='text/css'>
+      #calander{
+        width:150px;
+        height:200px;
+        background: #66a3ff;
+        color: #ffe6ff;
+        border-radius: 5px;
+        box-shadow:5px 5px 5px 5px #cce6ff;
+      }
+      #calander p{
+        font-family: 'Jua', sans-serif;
+        padding:3px 0;
+        margin:0;
+        color:#ffe6ff;
+        text-align: center;
+      }
+      #clock{
+        font-size: 26px;
+      }
+      #day{
+        font-size: 22px;
+      }
+      #date{
+        font-size: 60px;
+      }
+      #month-year{
+        font-size: 20px;
+      }
+    </style>
+
+  </head>
+  <body>
+   <div id='calander'>
+    <p id='clock'></p>
+    <p id='day'></p>
+    <p id='date'></p>
+    <p id='month-year'></p>
+
+    <script type='text/javascript'>
+      function calender(){
+        let day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        let month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        let date = new Date();
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        let session = 'AM';
+
+        if(h == 0){
+              h = 12;
+            };
+            if(h > 12){
+              h = h - 12;
+              session = 'PM';
+            }
+
+          h = (h < 10) ? '0' + h : h;
+          m = (m < 10) ? '0' + m : m;
+          s = (s < 10) ? '0' + s : s;
+
+          if(date.getDate() < 10){
+            date.getDate() = '0' + date.getDate();
+          }
+
+        setText('clock', h + ':' + m + ':' + s + ' ' + session);
+        setText('day', day[date.getDay()]);
+        setText('date', date.getDate() );
+        setText('month-year', month[date.getMonth()] + ' ' + (1900 + date.getYear()));
+
+
+        setTimeout(calender, 1000);
+      };
+
+      function setText(id, val){
+        document.getElementById(id).innerHTML = val;
+      };
+
+      window.onload = calender;
+
+    </script>
+
+   </div>
+  </body>
+</html>

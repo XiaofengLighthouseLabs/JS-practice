@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drag Game</title>
+    <style>
+      h2{
+        text-align: center;
+      }
+        .img{
+        width:150px;
+        height:150px;
+      }
+      .full-col{
+        width:100%;
+      }
+      .half-col{
+        float:left;
+        width:50%;
+      }
+      .qua-col{
+        width:25%;
+      }
+      .row:after,
+      .numDomain:after
+      {
+        display: table;
+      }
+      #dropDomain-1{
+        background-image: url('images-bg/traffic-bg_01.png');
+      }
+      #dropDomain-2{
+        background-image: url('images-bg/traffic-bg_02.png');
+      }
+      #dropDomain-3{
+        background-image: url('images-bg/traffic-bg_03.png');
+      }
+      #dropDomain-4{
+        background-image: url('images-bg/traffic-bg_04.png');
+      }
+      #dropDomain-5{
+        background-image: url('images-bg/traffic-bg_05.png');
+      }
+      #dropDomain-6{
+        background-image: url('images-bg/traffic-bg_06.png');
+      }
+      #dropDomain-7{
+        background-image: url('images-bg/traffic-bg_07.png');
+      }
+      #dropDomain-8{
+        background-image: url('images-bg/traffic-bg_08.png');
+      }
+      #dropDomain-9{
+        background-image: url('images-bg/traffic-bg_09.png');
+      }
+      #dropDomain-10{
+        background-image: url('images-bg/traffic-bg_10.png');
+      }
+      #dropDomain-11{
+        background-image: url('images-bg/traffic-bg_11.png');
+      }
+      #dropDomain-12{
+        background-image: url('images-bg/traffic-bg_12.png');
+      }
+      #dropDomain-13{
+        background-image: url('images-bg/traffic-bg_13.png');
+      }
+      #dropDomain-14{
+        background-image: url('images-bg/traffic-bg_14.png');
+      }
+      #dropDomain-15{
+        background-image: url('images-bg/traffic-bg_15.png');
+      }
+      #dropDomain-16{
+        background-image: url('images-bg/traffic-bg_16.png');
+      }
+      .rightBox{
+        position:relative;
+      }
+
+      .dropDomain{
+        width:150px;
+        height:150px;
+        background: #eee;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        display:inline-block;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class=row>
+      <div class='full-col'>
+        <h2>Traffic  (Score:<text id='score'>0</text>)</h2>
+      </div>
+
+      <div id='dropDomain-container' class='half-col'>
+
+          <div id='dropDomain-1' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+
+          <div id='dropDomain-2' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+
+         <div id='dropDomain-3' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+
+         <div id='dropDomain-4' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+
+          <div id='dropDomain-5' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+
+          <div id='dropDomain-6' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+
+
+          <div id='dropDomain-7' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+
+
+          <div id='dropDomain-8' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+
+
+          <div id='dropDomain-9' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+          <div id='dropDomain-10' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+          <div id='dropDomain-11' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+          <div id='dropDomain-12' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+          <div id='dropDomain-13' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+          <div id='dropDomain-14' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+          <div id='dropDomain-15' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+          <div id='dropDomain-16' class='dropDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'></div>
+
+      </div>
+
+    </div>
+
+    <div class=row>
+      <div class='half-col rightBox'>
+        <div id='img-container' class='imgContainer numDomain' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'>
+          <img id='img-1' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_01.png' />
+          <img id='img-2' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_02.png' />
+          <img id='img-3' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_03.png' />
+          <img id='img-4' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_04.png' />
+          <img id='img-5' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_05.png' />
+          <img id='img-6' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_06.png' />
+          <img id='img-7' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_07.png' />
+          <img id='img-8' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_08.png' />
+          <img id='img-9' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_09.png' />
+          <img id='img-10' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_10.png' />
+          <img id='img-11' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_11.png' />
+          <img id='img-12' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_12.png' />
+          <img id='img-13' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_13.png' />
+          <img id='img-14' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_14.png' />
+          <img id='img-15' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_15.png' />
+          <img id='img-16' class='img' draggable='ture' ondragstart='return start(event)' ondragend='return end(event)' src='images/traffic_16.png' />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let score = document.getElementById('score');
+        score.innerHTML = 0;
+      const enter = (e) => {
+        return true;
+      }
+      const over = (e) => {
+        e.stopPropagation();
+        let data = e.dataTransfer.getData('imgId');
+        let targetId = e.target.id;
+        if(targetId.indexOf('img') > -1){
+          return true;
+        }
+        return false;
+      }
+      const drop = (e) => {
+        e.stopPropagation();
+        let dataId = e.dataTransfer.getData('imgId');
+        let data = document.getElementById(dataId);
+        console.log(data);
+        console.log(e.target);
+        let picName = data.id.substring(4);
+        let domainName = e.target.id.substring(11);
+        if (picName == domainName){
+          e.target.appendChild(data);
+          console.log(e.target);
+          score.innerHTML = parseInt(score.innerHTML) + 1;
+          return false;
+        }
+      }
+    win = () => {
+     if (score.innerHTML == 16) {
+          alert('Congratulations! You won the game!\nClick OK to restart.');
+          location.reload();
+     }
+    }
+   setInterval(win, 50);
+
+      const start = (e) => {
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('imgId', e.target.id);
+        // console.log(e.target)
+        e.dataTransfer.setDragImage(e.target, 0, 0);
+        return true;
+      }
+      const end = (e) => {
+        e.dataTransfer.clearData('imgId');
+        return true;
+      }
+
+      const shuffleImgs = () => {
+        let imgcontainer = document.getElementById('img-container');
+        let imgs = imgcontainer.children;
+        let frag = document.createDocumentFragment();
+        while(imgs.length){
+          frag.appendChild(imgs[Math.floor(Math.random() * imgs.length)]);
+        }
+        imgcontainer.appendChild(frag);
+      }
+      window.onload = function(){
+        shuffleImgs();
+      }
+    </script>
+  </body>
+</html>

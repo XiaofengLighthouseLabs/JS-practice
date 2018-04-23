@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Code</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-qrcode-0.14.0.min.js"></script>
+    <style type='text/css'>
+      body{
+        background:#f1e7e7;
+        }
+      .generate-container{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translateX(-50%) translateY(-50%);
+        box-shadow: 0 0 6px 2px #c7a8a8;
+        height:500px;
+        color:#003ba9;
+        font-size:22px;
+      }
+      .qr-text{
+        margin:5px;
+        font-size:25px;
+        padding:5;
+        border:none;
+        color:#607d8b;
+      }
+      .generate{
+        width:750px;
+        height:30px;
+        font-size:25px;
+        margin:10px;
+        cursor:pointer;
+        background:#ff1a75;
+        border:none;
+        color:white;
+      }
+      #qrcode {
+        width: 128px;
+        height: 128px;
+        margin: 50px auto;
+        text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class='generate-container'>
+      <textarea type='text' class='qr-text' cols='50' rows='3'></textarea>
+      <br>
+      <button class='generate'>Generate</button>
+      <br>
+      <div id='qrcode'></div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    $('.generate').on('click',function(){
+      $('#qrcode').empty();
+      $('#qrcode').qrcode({text: $('.qr-text').val()});
+
+    })
+  </script>
+</html>
