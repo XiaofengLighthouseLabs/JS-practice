@@ -1,0 +1,20 @@
+
+.input-area {
+  font-family: 'Poor Story', cursive;
+  font-size:30px;
+}
+label {
+  cursor:pointer;
+}
+.photo{
+  position:relative;
+  left:330px;
+  width:200px;
+  height:auto;
+}
+.ascii{
+line-height: 0.7;
+position:relative;
+left:100px;
+font-size: 10px;
+}
